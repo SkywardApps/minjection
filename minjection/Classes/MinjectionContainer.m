@@ -47,7 +47,11 @@
 {
     [_initializers setValue:[^(){
         id instance = [cls alloc];
-        [instance performSelector:selector];
+        
+        IMP imp = [instance methodForSelector:selector];
+        void (*func)(id, SEL) = (void *)imp;
+        func(instance, selector);
+        
         return instance;
     } copy] forKey:[self keyForClass:target]];
     
@@ -75,7 +79,11 @@
 {
     [_initializers setValue:[^(){
         id instance = [cls alloc];
-        [instance performSelector:selector];
+        
+        IMP imp = [instance methodForSelector:selector];
+        void (*func)(id, SEL) = (void *)imp;
+        func(instance, selector);
+        
         return instance;
     } copy]forKey:[self keyForProtocol:target]];
 }
@@ -138,7 +146,10 @@
         else if(options.registerClass != nil)
         {
             createdObject = [options.registerClass alloc];
-            [createdObject performSelector:options.registerClassInitializer];
+            
+            IMP imp = [createdObject methodForSelector:options.registerClassInitializer];
+            void (*func)(id, SEL) = (void *)imp;
+            func(createdObject, options.registerClassInitializer);
         }
         
         // If there is a specific lifecycle requested, make sure the generated object is stored in the right cache.
@@ -237,7 +248,6 @@
         
         NSArray * attributes = [attributesString componentsSeparatedByString:@","];
         NSString * typeAttribute = attributes[0];
-        NSString * propertyType = [typeAttribute substringFromIndex:1];
         
         if (![typeAttribute hasPrefix:@"T@"])
             continue;

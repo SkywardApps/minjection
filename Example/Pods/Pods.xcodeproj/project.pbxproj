@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D1CE858BEDA5BFC82B1A1BD7B10F4D /* MinjectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */; };
+		02D1CE858BEDA5BFC82B1A1BD7B10F4D /* MinjectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA41117FA4D53EB0651ECA2C66F3614E /* MinjectionOptions.m */; };
 		16D1C15209A41638C5D4D46E2149A629 /* Pods-minjection_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0854A335046FB53DA38D2B527EE03B2 /* Pods-minjection_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2244D094F7B1D098589842F7E2B5108E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		404CA46B02FC7E359D315110845A8D0D /* minjection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		404CA46B02FC7E359D315110845A8D0D /* minjection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5A5D7D144A8B8DF8B225FE562A1E2C2 /* minjection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7788435859FE4A5DCE5034BC392733CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		8BEC13D70525E1911FFE183BEC244C73 /* Pods-minjection_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E5134E7716D3ABF9B8650110719768 /* Pods-minjection_Example-dummy.m */; };
 		8EB8EC179EA4224B7FC087E2AC0B810B /* Pods-minjection_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 656B431DB2B88F17A4D4296434C2F6E4 /* Pods-minjection_Tests-dummy.m */; };
-		C09793DFFF27FBA18B531773347BB06A /* MinjectionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */; };
+		C09793DFFF27FBA18B531773347BB06A /* MinjectionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = D650F8B61D1DAEF9C35EB1DC0036B7A6 /* MinjectionContainer.m */; };
 		C24591ACDA774029F63EEABC8A2C582B /* Pods-minjection_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 980E99A212D77869ABAEB08C64A659A5 /* Pods-minjection_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9C34006826BE53FD9A05CDDAFEDA2DC /* MinjectionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E598EE0358C0DB382DC1938334F8D47F /* minjection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */; };
+		C9C34006826BE53FD9A05CDDAFEDA2DC /* MinjectionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C111ECC2FBFC0C31AC5125EBBDE9530 /* MinjectionContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E598EE0358C0DB382DC1938334F8D47F /* minjection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25B98AA1095AD5A5C0C07FAB573C93A4 /* minjection-dummy.m */; };
 		EBCC9E514CD25B8ACE1B89D254A0F7F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		FE181B8EE13DC97F86F06FE6222DAF41 /* MinjectionOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE181B8EE13DC97F86F06FE6222DAF41 /* MinjectionOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C3505D4CE6120A5F9D007F539B2DB4B /* MinjectionOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,40 +34,43 @@
 
 /* Begin PBXFileReference section */
 		02E5134E7716D3ABF9B8650110719768 /* Pods-minjection_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-minjection_Example-dummy.m"; sourceTree = "<group>"; };
-		041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionContainer.h; path = minjection/Classes/MinjectionContainer.h; sourceTree = "<group>"; };
 		04AEA217A8E613A744ACF815BDA47BB4 /* Pods-minjection_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Example-resources.sh"; sourceTree = "<group>"; };
-		14FB35715D1CCB0231A60396E6C52CC7 /* minjection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = minjection.modulemap; sourceTree = "<group>"; };
-		17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionOptions.h; path = minjection/Classes/MinjectionOptions.h; sourceTree = "<group>"; };
 		1C4AAFDDE752835CF9EB7739510AD13C /* Pods-minjection_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-minjection_Tests.modulemap"; sourceTree = "<group>"; };
-		1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionOptions.m; path = minjection/Classes/MinjectionOptions.m; sourceTree = "<group>"; };
+		1F2FF44360831278723589FE9481C6F2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		22D22D497FDA31E6F568A885C1A26CE9 /* Pods_minjection_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_minjection_Tests.framework; path = "Pods-minjection_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25B98AA1095AD5A5C0C07FAB573C93A4 /* minjection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "minjection-dummy.m"; sourceTree = "<group>"; };
 		25C45D349A813EBC4F68EFE3142E4AA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27EF37A7D7F3A40BB77ADBBC47891197 /* minjection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-prefix.pch"; sourceTree = "<group>"; };
+		3BB063F61D7F525F5FCAFD9800D73516 /* minjection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = minjection.xcconfig; sourceTree = "<group>"; };
 		43783253A204F863B5D32A79E76701F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DFF60141FBF99F50FD420580916DFA8 /* Pods-minjection_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		594239CABFF773CE64071CF889F89DB5 /* Pods-minjection_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-minjection_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		62EE17FF388BB812F8D5F5C3AEA9CBF1 /* Pods-minjection_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Example-frameworks.sh"; sourceTree = "<group>"; };
 		656B431DB2B88F17A4D4296434C2F6E4 /* Pods-minjection_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-minjection_Tests-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		665F59A6D198B75D6DC1560DC6BBDCBC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		6BA2AA6C18FC781840A43F027E33A4A0 /* minjection.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = minjection.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7649179D7F2E40CF5D544F221A6EFEF8 /* minjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = minjection.framework; path = minjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78E023C91BA9ACCD3E6ADDE7C0005120 /* Pods-minjection_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-minjection_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		90835F3D02CA573C8610109482A52F9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79CFC428AA7FEE4D270A1279D7EE2620 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C111ECC2FBFC0C31AC5125EBBDE9530 /* MinjectionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionContainer.h; path = minjection/Classes/MinjectionContainer.h; sourceTree = "<group>"; };
+		8C3505D4CE6120A5F9D007F539B2DB4B /* MinjectionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionOptions.h; path = minjection/Classes/MinjectionOptions.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		980E99A212D77869ABAEB08C64A659A5 /* Pods-minjection_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-minjection_Tests-umbrella.h"; sourceTree = "<group>"; };
 		9E620BB24139B27A3AFAC13E1D136DA0 /* Pods-minjection_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		A7C8C7B049C7E83A61D62C174D4F5B47 /* minjection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = minjection.modulemap; sourceTree = "<group>"; };
 		C178F3C456B96697288B945E51F509C8 /* Pods_minjection_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_minjection_Example.framework; path = "Pods-minjection_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3C5A3C36BBE0035EBEFD5FF6C90AFBC /* Pods-minjection_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-resources.sh"; sourceTree = "<group>"; };
-		C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-umbrella.h"; sourceTree = "<group>"; };
-		C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionContainer.m; path = minjection/Classes/MinjectionContainer.m; sourceTree = "<group>"; };
+		CA41117FA4D53EB0651ECA2C66F3614E /* MinjectionOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionOptions.m; path = minjection/Classes/MinjectionOptions.m; sourceTree = "<group>"; };
 		CD46F59C04E78C9B2DAD5D925ED186BD /* Pods-minjection_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D59454747AFD2B70B532A407BB838061 /* Pods-minjection_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-minjection_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D650F8B61D1DAEF9C35EB1DC0036B7A6 /* MinjectionContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionContainer.m; path = minjection/Classes/MinjectionContainer.m; sourceTree = "<group>"; };
 		D74084CBCCC81ADF9FE5119BECFA0146 /* Pods-minjection_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-minjection_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "minjection-dummy.m"; sourceTree = "<group>"; };
+		E5A5D7D144A8B8DF8B225FE562A1E2C2 /* minjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-umbrella.h"; sourceTree = "<group>"; };
 		EAC90C4647AF806E5DDC251807E106A8 /* Pods-minjection_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED20B0AFF17021799063C924D207451E /* Pods-minjection_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		ED642269A716D035CB66501880435A09 /* minjection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = minjection.xcconfig; sourceTree = "<group>"; };
 		EE5A53C5DC5AE9A9A0165BA1EF7FFAA8 /* Pods-minjection_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-minjection_Example.modulemap"; sourceTree = "<group>"; };
 		F0854A335046FB53DA38D2B527EE03B2 /* Pods-minjection_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-minjection_Example-umbrella.h"; sourceTree = "<group>"; };
+		FDEA573D85CEA280B55C71534F695041 /* minjection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,22 +137,23 @@
 			path = "Target Support Files/Pods-minjection_Tests";
 			sourceTree = "<group>";
 		};
-		3D0642332A0F1866EA26003C989AD13C /* Development Pods */ = {
+		4893317CD320D501B7E951CC59ED1DF6 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				62EA71B81583EAD6CE8151FACF62716E /* minjection */,
+				5318DFDEC307BF5EFD2A24B3062C6B68 /* minjection */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		62EA71B81583EAD6CE8151FACF62716E /* minjection */ = {
+		5318DFDEC307BF5EFD2A24B3062C6B68 /* minjection */ = {
 			isa = PBXGroup;
 			children = (
-				041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */,
-				C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */,
-				17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */,
-				1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */,
-				B58596AE7A3DA5A8FA9FF254C921D72D /* Support Files */,
+				8C111ECC2FBFC0C31AC5125EBBDE9530 /* MinjectionContainer.h */,
+				D650F8B61D1DAEF9C35EB1DC0036B7A6 /* MinjectionContainer.m */,
+				8C3505D4CE6120A5F9D007F539B2DB4B /* MinjectionOptions.h */,
+				CA41117FA4D53EB0651ECA2C66F3614E /* MinjectionOptions.m */,
+				BEB173F6603BF6AA2E5C23322CCB36C6 /* Pod */,
+				DC3BD12A81D09BACC8B89726AC1B6C5F /* Support Files */,
 			);
 			name = minjection;
 			path = ../..;
@@ -159,25 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				3D0642332A0F1866EA26003C989AD13C /* Development Pods */,
+				4893317CD320D501B7E951CC59ED1DF6 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
 				FB32C053BD76D1AACD141965CBBA9B55 /* Products */,
 				F4A2B45772C0CFF6BFE8100D991802AA /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		B58596AE7A3DA5A8FA9FF254C921D72D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				90835F3D02CA573C8610109482A52F9A /* Info.plist */,
-				14FB35715D1CCB0231A60396E6C52CC7 /* minjection.modulemap */,
-				ED642269A716D035CB66501880435A09 /* minjection.xcconfig */,
-				DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */,
-				27EF37A7D7F3A40BB77ADBBC47891197 /* minjection-prefix.pch */,
-				C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/minjection";
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -188,12 +178,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BEB173F6603BF6AA2E5C23322CCB36C6 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				665F59A6D198B75D6DC1560DC6BBDCBC /* LICENSE */,
+				6BA2AA6C18FC781840A43F027E33A4A0 /* minjection.podspec */,
+				1F2FF44360831278723589FE9481C6F2 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		DC3BD12A81D09BACC8B89726AC1B6C5F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79CFC428AA7FEE4D270A1279D7EE2620 /* Info.plist */,
+				A7C8C7B049C7E83A61D62C174D4F5B47 /* minjection.modulemap */,
+				3BB063F61D7F525F5FCAFD9800D73516 /* minjection.xcconfig */,
+				25B98AA1095AD5A5C0C07FAB573C93A4 /* minjection-dummy.m */,
+				FDEA573D85CEA280B55C71534F695041 /* minjection-prefix.pch */,
+				E5A5D7D144A8B8DF8B225FE562A1E2C2 /* minjection-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/minjection";
 			sourceTree = "<group>";
 		};
 		F4A2B45772C0CFF6BFE8100D991802AA /* Targets Support Files */ = {
@@ -516,7 +530,7 @@
 		};
 		80731A80C7D9D438F1A06F641E9EA744 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED642269A716D035CB66501880435A09 /* minjection.xcconfig */;
+			baseConfigurationReference = 3BB063F61D7F525F5FCAFD9800D73516 /* minjection.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -642,7 +656,7 @@
 		};
 		DD7C01570F6B678916B830ACCABB7C32 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ED642269A716D035CB66501880435A09 /* minjection.xcconfig */;
+			baseConfigurationReference = 3BB063F61D7F525F5FCAFD9800D73516 /* minjection.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

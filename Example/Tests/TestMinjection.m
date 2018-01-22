@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
-#import "MinjectionContainer.h"
+#import <minjection/MinjectionContainer.h>
 
 #pragma mark - Test Classes
 
