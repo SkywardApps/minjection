@@ -7,7 +7,15 @@
 //
 
 @import UIKit;
+#import "ConfigurationTags.h"
 
 @interface MinjectionViewController : UIViewController
+
+#pragma mark Injected properties
+
+@property (nonatomic, copy) NSString<Title>* titleString;
+@property (nonatomic, copy) NSString<Subtitle>* subtitleString;
+
+#pragma mark -
 
 @end

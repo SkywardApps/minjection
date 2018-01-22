@@ -233,6 +233,34 @@
     return [NSString stringWithFormat:@"PROTOCOL:%@",NSStringFromProtocol(target)];
 }
 
+- (id)attemptToResolveProtocolName:(NSString *)typeProtocolName {
+    Protocol* typeProtocol = NSProtocolFromString(typeProtocolName);
+    if (typeProtocol == nil)
+        return nil;
+    
+    NSLog(@"Which we understood");
+    
+    if(![self canResolveProtocol:typeProtocol])
+        return nil;
+    
+    NSLog(@"And can resolve!");
+    return [self resolveProtocol:typeProtocol];
+}
+
+- (id)attemptToResolveClassName:(NSString *)typeClassName {
+    Class typeClass = NSClassFromString(typeClassName);
+    if (typeClass == nil)
+        return nil;
+    
+    NSLog(@"Which we understood");
+    
+    if(![self canResolveClass:typeClass])
+        return nil;
+    
+    NSLog(@"And can resolve!");
+    return [self resolveClass:typeClass];
+}
+
 - (void) injectProperties:(id)target
 {
     unsigned int numberOfProperties = 0;
@@ -246,8 +274,8 @@
         NSString *attributesString = [[NSString alloc] initWithUTF8String:property_getAttributes(property)];
         NSLog(@"Property %@ attributes: %@", name, attributesString);
         
-        NSArray * attributes = [attributesString componentsSeparatedByString:@","];
-        NSString * typeAttribute = attributes[0];
+        NSArray *attributes = [attributesString componentsSeparatedByString:@","];
+        NSString *typeAttribute = attributes[0];
         
         if (![typeAttribute hasPrefix:@"T@"])
             continue;
@@ -259,40 +287,40 @@
         
         id resolvedObject = nil;
         
+        // Case we're missing here: NSString<Protocol>
         if([typeAttribute hasPrefix:@"T@\"<"])
         {
             // this is a protocol!
             NSLog(@"Appears to be a protocol!");
             NSString * typeProtocolName = [typeAttribute substringWithRange:NSMakeRange(4, typeAttribute.length-6)];  //turns @"<NSDate>" into NSDate
-            Protocol* typeProtocol = NSProtocolFromString(typeProtocolName);
-            if (typeProtocol == nil)
-                continue;
-            
-            NSLog(@"Which we understood");
-            
-            if(![self canResolveProtocol:typeProtocol])
-                continue;
-            
-            NSLog(@"And can resolve!");
-            resolvedObject = [self resolveProtocol:typeProtocol];
+            resolvedObject = [self attemptToResolveProtocolName:typeProtocolName];
         }
-        else
+        else if([typeAttribute rangeOfString:@"<"].location == NSNotFound)
         {
             NSLog(@"Appears to be a class");
             NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, typeAttribute.length-4)];  //turns @"NSDate" into NSDate
-            Class typeClass = NSClassFromString(typeClassName);
-            if (typeClass == nil)
-                continue;
-            
-            NSLog(@"Which we understood");
-            
-            if(![self canResolveClass:typeClass])
-                continue;
-        
-            NSLog(@"And can resolve!");
-            
-            resolvedObject = [self resolveClass:typeClass];
+            resolvedObject = [self attemptToResolveClassName:typeClassName];
         }
+        else
+        {
+            // both cases apply here!
+            NSLog(@"Appears to be a class with a protocol");
+            NSInteger locationOfProtocol = [typeAttribute rangeOfString:@"<"].location;
+            NSInteger locationOfProtocolEnd = [typeAttribute rangeOfString:@">"].location;
+            NSString* typeProtocolName = [typeAttribute substringWithRange:NSMakeRange(locationOfProtocol+1, locationOfProtocolEnd-locationOfProtocol-1)];
+            resolvedObject = [self attemptToResolveProtocolName:typeProtocolName];
+            
+            if(resolvedObject == nil)
+            {
+                NSInteger locationOfClass = [typeAttribute rangeOfString:@"\""].location;
+                NSString* typeClassName = [typeAttribute substringWithRange:NSMakeRange(locationOfClass+1, locationOfProtocol-locationOfClass-1)];
+                resolvedObject = [self attemptToResolveClassName:typeClassName];
+            }
+            
+        }
+        
+        if(resolvedObject == nil)
+            continue;
         
         if([target valueForKey:name] != nil)
             continue;

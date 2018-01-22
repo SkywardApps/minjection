@@ -8,12 +8,16 @@
 
 #import "MinjectionAppDelegate.h"
 #import <minjection/MinjectionContainer.h>
+#import "ConfigurationTags.h"
 
 @implementation MinjectionAppDelegate
 
 - (MinjectionContainer*) createExampleContainer
 {
     MinjectionContainer* container = [[MinjectionContainer alloc] init];
+    
+    [container registerInstance:@"This is the title" forProtocol:@protocol(Title)];
+    [container registerInstance:@"Below is the tagline" forProtocol:@protocol(Subtitle)];
     
     return container;
 }

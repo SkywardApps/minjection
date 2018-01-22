@@ -9,6 +9,12 @@
 #import "MinjectionViewController.h"
 
 @interface MinjectionViewController ()
+{
+    
+}
+
+@property (nonatomic, weak) IBOutlet UILabel* titleLabel;
+@property (nonatomic, weak) IBOutlet UILabel* subtitleLabel;
 
 @end
 
@@ -17,13 +23,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    _titleLabel.text = _titleString;
+    _subtitleLabel.text = _subtitleString;
 }
 
 @end
