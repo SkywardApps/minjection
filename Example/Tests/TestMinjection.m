@@ -8,8 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <XCTest/XCTest.h>
-#import <minjection/MinjectionContainer.h>
-#import <minjection/MinjectionOptions.h>
+#import "MinjectionContainer.h"
 
 #pragma mark - Test Classes
 
@@ -104,7 +103,7 @@
 // Make sure that a request for a class will resolve via a block when specified
 - (void)testSpecificClassResolvesBlock {
     MinjectionContainer* container = [[MinjectionContainer alloc] init];
-    [container registerBlock:^id(MinjectionContainer* container){
+    [container registerBlock:^id(MinjectionContainer* c){
         return [NSDictionary dictionaryWithObject:@"OK" forKey:@"Status"];
     } forClass:[NSDictionary class]];
     
@@ -231,6 +230,7 @@
                                                       selector:@selector(init)
                                               registerInstance:nil
                                                registerFactory:nil
+                                           factoryDependencies:nil
                                         shouldInjectProperties:YES
                                                       lifetime:MinjectionLifetimeCycle]];
     NSDictionary* classDictionary = [NSDictionary dictionaryWithObject:@"Class" forKey:@"Type"];
@@ -271,11 +271,12 @@
 - (void)testStaticLifetime
 {
     MinjectionContainer* container = [[MinjectionContainer alloc] init];
-    [container registerWithOptions:[MinjectionOptions forClass:AutoInjectable.class
+    [container registerWithOptions:[MinjectionOptions    forClass:AutoInjectable.class
                                                     registerClass:[AutoInjectable class]
                                                          selector:@selector(init)
                                                  registerInstance:nil
                                                   registerFactory:nil
+                                              factoryDependencies:nil
                                            shouldInjectProperties:YES
                                                          lifetime:MinjectionLifetimeStatic]];
     
@@ -288,11 +289,12 @@
 - (void)testInstanceLifetime
 {
     MinjectionContainer* container = [[MinjectionContainer alloc] init];
-    [container registerWithOptions:[MinjectionOptions forClass:AutoInjectable.class
+    [container registerWithOptions:[MinjectionOptions    forClass:AutoInjectable.class
                                                     registerClass:[AutoInjectable class]
                                                          selector:@selector(init)
                                                  registerInstance:nil
                                                   registerFactory:nil
+                                              factoryDependencies:nil
                                            shouldInjectProperties:NO
                                                          lifetime:MinjectionLifetimeInstance]];
     
@@ -309,6 +311,7 @@
                                                       selector:@selector(init)
                                               registerInstance:nil
                                                registerFactory:nil
+                                           factoryDependencies:nil
                                         shouldInjectProperties:YES
                                                       lifetime:MinjectionLifetimeCycle]];
     

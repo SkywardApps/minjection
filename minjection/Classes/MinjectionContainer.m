@@ -13,7 +13,7 @@
 @interface MinjectionContainer ()
 {
     /// Our factories for providing services
-    NSMutableDictionary<NSString*, FactoryMethod>* _initializers;
+    NSMutableDictionary<NSString*, FactoryMethodWithDependencies>* _initializers;
     /// Our cache of services generated for this container
     NSMutableDictionary<NSString*, id>* _staticCache;
     /// Our cache of services generated in this dependency chain
@@ -97,7 +97,7 @@
         key = [self keyForClass:options.forClass];
     
     // We create a factory method that handles the options requested
-    FactoryMethod constructorMethod = [^(MinjectionContainer* container){
+    FactoryMethodWithDependencies constructorMethod = [^(MinjectionContainer* container){
         // The simplest case is if an instance is provided.  We do nothing.
         if(options.registerInstance != nil)
             return options.registerInstance;
@@ -121,7 +121,19 @@
         // Create the object as requested (factory or class instance)
         if(options.registerFactory != nil)
         {
-            createdObject = options.registerFactory(container);
+            NSMutableDictionary* dict = @{}.mutableCopy;
+            for(NSString* key in options.factoryDependencies.allKeys)
+            {
+                if([NSStringFromClass([options.factoryDependencies[key] class]) isEqualToString:@"Protocol"])
+                {
+                    dict[key] = [self resolveProtocol:options.factoryDependencies[key]];
+                }
+                else
+                {
+                    dict[key] = [self resolveClass:options.factoryDependencies[key]];
+                }
+            }
+            createdObject = options.registerFactory(container, dict);
         }
         else if(options.registerClass != nil)
         {
@@ -182,10 +194,10 @@
     @try
     {
         // Generate the service -- this can take advantage of any chain-lifecycle services now.
-        FactoryMethod method =_initializers[key];
+        FactoryMethodWithDependencies method =_initializers[key];
         if(method != nil)
         {
-            return method(self);
+            return method(self, nil);
         }
     }
     @finally

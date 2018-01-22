@@ -10,9 +10,10 @@
 
 @class MinjectionContainer;
 /**
- * The block type we use as factory methods.
+ * The block types we use as factory methods.
  */
 typedef id(^FactoryMethod)(MinjectionContainer*);
+typedef id(^FactoryMethodWithDependencies)(MinjectionContainer*, NSDictionary<NSString*,id>*);
 
 /**
  * Control how long an instance is used within the container.
@@ -47,7 +48,8 @@ typedef enum {
        registerClass:(Class)registerClass
             selector:(SEL)registerClassSelector
     registerInstance:(id)instance
-     registerFactory:(FactoryMethod)factory
+     registerFactory:(FactoryMethodWithDependencies)factory
+ factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
 shouldInjectProperties:(BOOL)shouldInjectProperties
             lifetime:(MinjectionLifetime)lifetime;
 
@@ -56,7 +58,8 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
           registerClass:(Class)registerClass
                selector:(SEL)registerClassSelector
        registerInstance:(id)instance
-        registerFactory:(FactoryMethod)factory
+        registerFactory:(FactoryMethodWithDependencies)factory
+    factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
  shouldInjectProperties:(BOOL)shouldInjectProperties
                lifetime:(MinjectionLifetime)lifetime;
 
@@ -94,8 +97,15 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
 
 /**
  * The factory block method this will use to instantiate the service.
+ * Mutually exclusive with registerClass and registerInstance.
  */
-@property FactoryMethod registerFactory;
+@property FactoryMethodWithDependencies registerFactory;
+
+/**
+ * Any dependencies to fill and pass into the factory.
+ * Only valid with registerFactory
+ */
+@property NSDictionary<NSString*,id>* factoryDependencies;
 
 #pragma mark - Behaviour controls
 

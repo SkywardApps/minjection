@@ -23,6 +23,7 @@
         _registerClass = nil;
         _registerClassInitializer = nil;
         _registerFactory = nil;
+        _factoryDependencies = nil;
         _registerInstance = nil;
         
         _shouldInjectProperties = YES;
@@ -38,7 +39,8 @@
       registerClass:(Class)registerClass
            selector:(SEL)registerClassSelector
    registerInstance:(id)instance
-    registerFactory:(FactoryMethod)factory
+    registerFactory:(FactoryMethodWithDependencies)factory
+factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
 shouldInjectProperties:(BOOL)shouldInjectProperties
            lifetime:(MinjectionLifetime)lifetime
 {
@@ -50,6 +52,7 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
         target->_registerClass = registerClass;
         target->_registerClassInitializer = registerClassSelector;
         target->_registerFactory = factory;
+        target->_factoryDependencies = dependencies;
         target->_registerInstance = instance;
         
         target->_shouldInjectProperties = shouldInjectProperties;
@@ -61,13 +64,14 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
 /**
  * Static factory method exposing all options for providing a protocol
  */
-+ (id) forProtocol:(Protocol*)forProtocol
-         registerClass:(Class)registerClass
-              selector:(SEL)registerClassSelector
-      registerInstance:(id)instance
-       registerFactory:(FactoryMethod)factory
-shouldInjectProperties:(BOOL)shouldInjectProperties
-              lifetime:(MinjectionLifetime)lifetime
++ (id)      forProtocol:(Protocol*)forProtocol
+          registerClass:(Class)registerClass
+               selector:(SEL)registerClassSelector
+       registerInstance:(id)instance
+        registerFactory:(FactoryMethodWithDependencies)factory
+    factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
+ shouldInjectProperties:(BOOL)shouldInjectProperties
+               lifetime:(MinjectionLifetime)lifetime
 {
     MinjectionOptions* target;
     if((target = [[MinjectionOptions alloc] init]))
@@ -77,6 +81,7 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
         target->_registerClass = registerClass;
         target->_registerClassInitializer = registerClassSelector;
         target->_registerFactory = factory;
+        target->_factoryDependencies = dependencies;
         target->_registerInstance = instance;
         
         target->_shouldInjectProperties = shouldInjectProperties;
