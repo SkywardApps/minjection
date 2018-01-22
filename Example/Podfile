@@ -1,6 +1,11 @@
 use_frameworks!
-target 'minjection_Tests' do
+
+target 'minjection_Example' do
   pod 'minjection', :path => '../'
-  
-  
+
+  target 'minjection_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end

@@ -7,99 +7,149 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45F963299238DD1DD3147EDE479490B8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4DBDB030819B846B4BA9A3C3E31F2EA9 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = CC8E4470A1EAE9C33350DEFCA55952BE /* ReplaceMe.m */; };
-		883650FE45C50DBA9A8BA820B2167910 /* minjection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7913564D15024E356AB554415C6407B2 /* minjection-dummy.m */; };
-		8C0ABBFBE17E7AEA0B05DB4057036623 /* Pods-minjection_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C39CBD95F915855DE86C58E517B71537 /* Pods-minjection_Tests-dummy.m */; };
-		C13FDA4B2EDEDE2893BCB6E433B3E865 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		CCB38CE566DE1DE370C79750729DE977 /* minjection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E5F3E7BB7CB08636E509F391044FA49 /* minjection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E79B590B0ADA36A170CB13ECABB1157D /* Pods-minjection_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B47FB46F4075B9F8AEF9BA9ED6CAB044 /* Pods-minjection_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02D1CE858BEDA5BFC82B1A1BD7B10F4D /* MinjectionOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */; };
+		16D1C15209A41638C5D4D46E2149A629 /* Pods-minjection_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F0854A335046FB53DA38D2B527EE03B2 /* Pods-minjection_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2244D094F7B1D098589842F7E2B5108E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		404CA46B02FC7E359D315110845A8D0D /* minjection-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7788435859FE4A5DCE5034BC392733CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8BEC13D70525E1911FFE183BEC244C73 /* Pods-minjection_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E5134E7716D3ABF9B8650110719768 /* Pods-minjection_Example-dummy.m */; };
+		8EB8EC179EA4224B7FC087E2AC0B810B /* Pods-minjection_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 656B431DB2B88F17A4D4296434C2F6E4 /* Pods-minjection_Tests-dummy.m */; };
+		C09793DFFF27FBA18B531773347BB06A /* MinjectionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */; };
+		C24591ACDA774029F63EEABC8A2C582B /* Pods-minjection_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 980E99A212D77869ABAEB08C64A659A5 /* Pods-minjection_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C9C34006826BE53FD9A05CDDAFEDA2DC /* MinjectionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E598EE0358C0DB382DC1938334F8D47F /* minjection-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */; };
+		EBCC9E514CD25B8ACE1B89D254A0F7F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		FE181B8EE13DC97F86F06FE6222DAF41 /* MinjectionOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9EB09F8D511D61859AD231B7ED11C088 /* PBXContainerItemProxy */ = {
+		9FF9FA4C47074E4E415F0564DF87A2EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 5EE33F5E2F8E37D56EDC2B85A05DEC57;
+			remoteGlobalIDString = 46352963968A482BC014FC6C3451B19E;
 			remoteInfo = minjection;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B322B0526E9D6B626BF3D5FF5A4D59 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EFC8A4FBBE311266FA1E27306544FDA /* Pods_minjection_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_minjection_Tests.framework; path = "Pods-minjection_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F00A1093CB53DF82388B2ED918174DC /* minjection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = minjection.xcconfig; sourceTree = "<group>"; };
-		2E5F3E7BB7CB08636E509F391044FA49 /* minjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-umbrella.h"; sourceTree = "<group>"; };
-		4EEFDDAE79969E2A5736D7041674FCA3 /* Pods-minjection_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-minjection_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4FAFC57436673D879C46F104E0A10112 /* Pods-minjection_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-resources.sh"; sourceTree = "<group>"; };
-		59B971D43B947788C15FAC340C86599A /* Pods-minjection_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		02E5134E7716D3ABF9B8650110719768 /* Pods-minjection_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-minjection_Example-dummy.m"; sourceTree = "<group>"; };
+		041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionContainer.h; path = minjection/Classes/MinjectionContainer.h; sourceTree = "<group>"; };
+		04AEA217A8E613A744ACF815BDA47BB4 /* Pods-minjection_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Example-resources.sh"; sourceTree = "<group>"; };
+		14FB35715D1CCB0231A60396E6C52CC7 /* minjection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = minjection.modulemap; sourceTree = "<group>"; };
+		17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MinjectionOptions.h; path = minjection/Classes/MinjectionOptions.h; sourceTree = "<group>"; };
+		1C4AAFDDE752835CF9EB7739510AD13C /* Pods-minjection_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-minjection_Tests.modulemap"; sourceTree = "<group>"; };
+		1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionOptions.m; path = minjection/Classes/MinjectionOptions.m; sourceTree = "<group>"; };
+		22D22D497FDA31E6F568A885C1A26CE9 /* Pods_minjection_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_minjection_Tests.framework; path = "Pods-minjection_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25C45D349A813EBC4F68EFE3142E4AA0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27EF37A7D7F3A40BB77ADBBC47891197 /* minjection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-prefix.pch"; sourceTree = "<group>"; };
+		43783253A204F863B5D32A79E76701F5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DFF60141FBF99F50FD420580916DFA8 /* Pods-minjection_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		594239CABFF773CE64071CF889F89DB5 /* Pods-minjection_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-minjection_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62EE17FF388BB812F8D5F5C3AEA9CBF1 /* Pods-minjection_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Example-frameworks.sh"; sourceTree = "<group>"; };
+		656B431DB2B88F17A4D4296434C2F6E4 /* Pods-minjection_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-minjection_Tests-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		70A37458EE48FAD0B6D5E5D6FE6C9213 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7913564D15024E356AB554415C6407B2 /* minjection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "minjection-dummy.m"; sourceTree = "<group>"; };
-		7DD5B3AA86DA67C37D8773E34CC081E6 /* minjection-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-prefix.pch"; sourceTree = "<group>"; };
-		8B9E1BEFB1E0EEC88EFBE1217AABEF8A /* minjection.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = minjection.modulemap; sourceTree = "<group>"; };
+		7649179D7F2E40CF5D544F221A6EFEF8 /* minjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = minjection.framework; path = minjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E023C91BA9ACCD3E6ADDE7C0005120 /* Pods-minjection_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-minjection_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		90835F3D02CA573C8610109482A52F9A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B47FB46F4075B9F8AEF9BA9ED6CAB044 /* Pods-minjection_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-minjection_Tests-umbrella.h"; sourceTree = "<group>"; };
-		B78C32D5EFDB376108C5EB1BF46367B8 /* Pods-minjection_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BE5D5CF2B5E06A56BE94796E8A2D7449 /* Pods-minjection_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-minjection_Tests.modulemap"; sourceTree = "<group>"; };
-		C39CBD95F915855DE86C58E517B71537 /* Pods-minjection_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-minjection_Tests-dummy.m"; sourceTree = "<group>"; };
-		CC8E4470A1EAE9C33350DEFCA55952BE /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = minjection/Classes/ReplaceMe.m; sourceTree = "<group>"; };
-		D15BF44464B9C0E7796C45C3D256187E /* Pods-minjection_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-minjection_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D5E695459E2705177FB6058C62947380 /* Pods-minjection_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		F592F24F86B146177842A8B22493BF77 /* minjection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = minjection.framework; path = minjection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980E99A212D77869ABAEB08C64A659A5 /* Pods-minjection_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-minjection_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9E620BB24139B27A3AFAC13E1D136DA0 /* Pods-minjection_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C178F3C456B96697288B945E51F509C8 /* Pods_minjection_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_minjection_Example.framework; path = "Pods-minjection_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3C5A3C36BBE0035EBEFD5FF6C90AFBC /* Pods-minjection_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-resources.sh"; sourceTree = "<group>"; };
+		C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "minjection-umbrella.h"; sourceTree = "<group>"; };
+		C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MinjectionContainer.m; path = minjection/Classes/MinjectionContainer.m; sourceTree = "<group>"; };
+		CD46F59C04E78C9B2DAD5D925ED186BD /* Pods-minjection_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D59454747AFD2B70B532A407BB838061 /* Pods-minjection_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-minjection_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D74084CBCCC81ADF9FE5119BECFA0146 /* Pods-minjection_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-minjection_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "minjection-dummy.m"; sourceTree = "<group>"; };
+		EAC90C4647AF806E5DDC251807E106A8 /* Pods-minjection_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-minjection_Example.release.xcconfig"; sourceTree = "<group>"; };
+		ED20B0AFF17021799063C924D207451E /* Pods-minjection_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-minjection_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		ED642269A716D035CB66501880435A09 /* minjection.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = minjection.xcconfig; sourceTree = "<group>"; };
+		EE5A53C5DC5AE9A9A0165BA1EF7FFAA8 /* Pods-minjection_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-minjection_Example.modulemap"; sourceTree = "<group>"; };
+		F0854A335046FB53DA38D2B527EE03B2 /* Pods-minjection_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-minjection_Example-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7EA76188972BCC9554334539DB16BF28 /* Frameworks */ = {
+		3E6CB2DB0460EB7065E062A63DFEACD1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45F963299238DD1DD3147EDE479490B8 /* Foundation.framework in Frameworks */,
+				2244D094F7B1D098589842F7E2B5108E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		873C535916FDDA6585B99AE406AF2BA9 /* Frameworks */ = {
+		5EAD3579034DA74DA814811014AE3DA9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C13FDA4B2EDEDE2893BCB6E433B3E865 /* Foundation.framework in Frameworks */,
+				EBCC9E514CD25B8ACE1B89D254A0F7F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46A796B4BD0BAE2C151EF36B59BC9B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7788435859FE4A5DCE5034BC392733CB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		027A4B772AE0FA3B02EC10AB130E46B2 /* Development Pods */ = {
+		17443466C970D32E9CD9CDFFCEFA633F /* Pods-minjection_Example */ = {
 			isa = PBXGroup;
 			children = (
-				6DECB525BC26FF4A87508B9E354ED578 /* minjection */,
+				43783253A204F863B5D32A79E76701F5 /* Info.plist */,
+				EE5A53C5DC5AE9A9A0165BA1EF7FFAA8 /* Pods-minjection_Example.modulemap */,
+				D59454747AFD2B70B532A407BB838061 /* Pods-minjection_Example-acknowledgements.markdown */,
+				D74084CBCCC81ADF9FE5119BECFA0146 /* Pods-minjection_Example-acknowledgements.plist */,
+				02E5134E7716D3ABF9B8650110719768 /* Pods-minjection_Example-dummy.m */,
+				62EE17FF388BB812F8D5F5C3AEA9CBF1 /* Pods-minjection_Example-frameworks.sh */,
+				04AEA217A8E613A744ACF815BDA47BB4 /* Pods-minjection_Example-resources.sh */,
+				F0854A335046FB53DA38D2B527EE03B2 /* Pods-minjection_Example-umbrella.h */,
+				CD46F59C04E78C9B2DAD5D925ED186BD /* Pods-minjection_Example.debug.xcconfig */,
+				EAC90C4647AF806E5DDC251807E106A8 /* Pods-minjection_Example.release.xcconfig */,
+			);
+			name = "Pods-minjection_Example";
+			path = "Target Support Files/Pods-minjection_Example";
+			sourceTree = "<group>";
+		};
+		233E2EBB5D50F25D2736EFB09592C804 /* Pods-minjection_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				25C45D349A813EBC4F68EFE3142E4AA0 /* Info.plist */,
+				1C4AAFDDE752835CF9EB7739510AD13C /* Pods-minjection_Tests.modulemap */,
+				594239CABFF773CE64071CF889F89DB5 /* Pods-minjection_Tests-acknowledgements.markdown */,
+				78E023C91BA9ACCD3E6ADDE7C0005120 /* Pods-minjection_Tests-acknowledgements.plist */,
+				656B431DB2B88F17A4D4296434C2F6E4 /* Pods-minjection_Tests-dummy.m */,
+				ED20B0AFF17021799063C924D207451E /* Pods-minjection_Tests-frameworks.sh */,
+				C3C5A3C36BBE0035EBEFD5FF6C90AFBC /* Pods-minjection_Tests-resources.sh */,
+				980E99A212D77869ABAEB08C64A659A5 /* Pods-minjection_Tests-umbrella.h */,
+				4DFF60141FBF99F50FD420580916DFA8 /* Pods-minjection_Tests.debug.xcconfig */,
+				9E620BB24139B27A3AFAC13E1D136DA0 /* Pods-minjection_Tests.release.xcconfig */,
+			);
+			name = "Pods-minjection_Tests";
+			path = "Target Support Files/Pods-minjection_Tests";
+			sourceTree = "<group>";
+		};
+		3D0642332A0F1866EA26003C989AD13C /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62EA71B81583EAD6CE8151FACF62716E /* minjection */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		0CC086B4E34D2AA91DE72D4EE08ED988 /* Targets Support Files */ = {
+		62EA71B81583EAD6CE8151FACF62716E /* minjection */ = {
 			isa = PBXGroup;
 			children = (
-				9356717BB93C876ACE577BB86A266D9D /* Pods-minjection_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		46F94DEA4750326D021028ED826003DE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F592F24F86B146177842A8B22493BF77 /* minjection.framework */,
-				0EFC8A4FBBE311266FA1E27306544FDA /* Pods_minjection_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6DECB525BC26FF4A87508B9E354ED578 /* minjection */ = {
-			isa = PBXGroup;
-			children = (
-				CC8E4470A1EAE9C33350DEFCA55952BE /* ReplaceMe.m */,
-				972E67B1FFA7EA6ABB31784CC350EEAD /* Support Files */,
+				041A32884DC815BE5DEEE72E0B683BF5 /* MinjectionContainer.h */,
+				C99DFA6E7D2C5806512A7792B007F4A1 /* MinjectionContainer.m */,
+				17A500D2300E6C1F0DA82A6880AC8439 /* MinjectionOptions.h */,
+				1C54B31AE82AFC893AF2754AB3B00065 /* MinjectionOptions.m */,
+				B58596AE7A3DA5A8FA9FF254C921D72D /* Support Files */,
 			);
 			name = minjection;
 			path = ../..;
@@ -109,40 +159,22 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				027A4B772AE0FA3B02EC10AB130E46B2 /* Development Pods */,
+				3D0642332A0F1866EA26003C989AD13C /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				46F94DEA4750326D021028ED826003DE /* Products */,
-				0CC086B4E34D2AA91DE72D4EE08ED988 /* Targets Support Files */,
+				FB32C053BD76D1AACD141965CBBA9B55 /* Products */,
+				F4A2B45772C0CFF6BFE8100D991802AA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9356717BB93C876ACE577BB86A266D9D /* Pods-minjection_Tests */ = {
+		B58596AE7A3DA5A8FA9FF254C921D72D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				00B322B0526E9D6B626BF3D5FF5A4D59 /* Info.plist */,
-				BE5D5CF2B5E06A56BE94796E8A2D7449 /* Pods-minjection_Tests.modulemap */,
-				4EEFDDAE79969E2A5736D7041674FCA3 /* Pods-minjection_Tests-acknowledgements.markdown */,
-				D15BF44464B9C0E7796C45C3D256187E /* Pods-minjection_Tests-acknowledgements.plist */,
-				C39CBD95F915855DE86C58E517B71537 /* Pods-minjection_Tests-dummy.m */,
-				59B971D43B947788C15FAC340C86599A /* Pods-minjection_Tests-frameworks.sh */,
-				4FAFC57436673D879C46F104E0A10112 /* Pods-minjection_Tests-resources.sh */,
-				B47FB46F4075B9F8AEF9BA9ED6CAB044 /* Pods-minjection_Tests-umbrella.h */,
-				B78C32D5EFDB376108C5EB1BF46367B8 /* Pods-minjection_Tests.debug.xcconfig */,
-				D5E695459E2705177FB6058C62947380 /* Pods-minjection_Tests.release.xcconfig */,
-			);
-			name = "Pods-minjection_Tests";
-			path = "Target Support Files/Pods-minjection_Tests";
-			sourceTree = "<group>";
-		};
-		972E67B1FFA7EA6ABB31784CC350EEAD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				70A37458EE48FAD0B6D5E5D6FE6C9213 /* Info.plist */,
-				8B9E1BEFB1E0EEC88EFBE1217AABEF8A /* minjection.modulemap */,
-				0F00A1093CB53DF82388B2ED918174DC /* minjection.xcconfig */,
-				7913564D15024E356AB554415C6407B2 /* minjection-dummy.m */,
-				7DD5B3AA86DA67C37D8773E34CC081E6 /* minjection-prefix.pch */,
-				2E5F3E7BB7CB08636E509F391044FA49 /* minjection-umbrella.h */,
+				90835F3D02CA573C8610109482A52F9A /* Info.plist */,
+				14FB35715D1CCB0231A60396E6C52CC7 /* minjection.modulemap */,
+				ED642269A716D035CB66501880435A09 /* minjection.xcconfig */,
+				DE7448B55FDBB514231D8D6CEA40093B /* minjection-dummy.m */,
+				27EF37A7D7F3A40BB77ADBBC47891197 /* minjection-prefix.pch */,
+				C69E821147555C259201498DCDE8AAC7 /* minjection-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/minjection";
@@ -164,53 +196,99 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		F4A2B45772C0CFF6BFE8100D991802AA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				17443466C970D32E9CD9CDFFCEFA633F /* Pods-minjection_Example */,
+				233E2EBB5D50F25D2736EFB09592C804 /* Pods-minjection_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		FB32C053BD76D1AACD141965CBBA9B55 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7649179D7F2E40CF5D544F221A6EFEF8 /* minjection.framework */,
+				C178F3C456B96697288B945E51F509C8 /* Pods_minjection_Example.framework */,
+				22D22D497FDA31E6F568A885C1A26CE9 /* Pods_minjection_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D2C5A570516AB98D4D50E64B3BF832B0 /* Headers */ = {
+		24C47CE489EB57E64F49B87599798B59 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB38CE566DE1DE370C79750729DE977 /* minjection-umbrella.h in Headers */,
+				C24591ACDA774029F63EEABC8A2C582B /* Pods-minjection_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E485C8FC64D9D1C70EB51DABCB812B21 /* Headers */ = {
+		9AB4EDBBA4FEFE3A14B80A23DAC5026F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E79B590B0ADA36A170CB13ECABB1157D /* Pods-minjection_Tests-umbrella.h in Headers */,
+				16D1C15209A41638C5D4D46E2149A629 /* Pods-minjection_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0ED770785D4E31A97C5A348A979F673 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				404CA46B02FC7E359D315110845A8D0D /* minjection-umbrella.h in Headers */,
+				C9C34006826BE53FD9A05CDDAFEDA2DC /* MinjectionContainer.h in Headers */,
+				FE181B8EE13DC97F86F06FE6222DAF41 /* MinjectionOptions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3A872F7234E0C398BFE15903A1399A24 /* Pods-minjection_Tests */ = {
+		252AB0B32DBC15E15F8CC8A3A9618110 /* Pods-minjection_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FFBF1E0BA2666D276ABC30B9CC19E3A9 /* Build configuration list for PBXNativeTarget "Pods-minjection_Tests" */;
+			buildConfigurationList = 0E5FBA1A7224FD5A9849B599D2FBEE08 /* Build configuration list for PBXNativeTarget "Pods-minjection_Example" */;
 			buildPhases = (
-				25EC561F27C520AABF80B2D7BD69AE57 /* Sources */,
-				7EA76188972BCC9554334539DB16BF28 /* Frameworks */,
-				E485C8FC64D9D1C70EB51DABCB812B21 /* Headers */,
+				50A4387AAA83E6A8EFF857E30F40DC27 /* Sources */,
+				3E6CB2DB0460EB7065E062A63DFEACD1 /* Frameworks */,
+				9AB4EDBBA4FEFE3A14B80A23DAC5026F /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DB55FDA6A0C8E244A505139C05C942F9 /* PBXTargetDependency */,
+				1CBD6894B4BF906410A823322982AA4B /* PBXTargetDependency */,
+			);
+			name = "Pods-minjection_Example";
+			productName = "Pods-minjection_Example";
+			productReference = C178F3C456B96697288B945E51F509C8 /* Pods_minjection_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		31B28CB3FF0B35B7B935FE141F6787CD /* Pods-minjection_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4C05F901F5509B5176D95866DD949F9 /* Build configuration list for PBXNativeTarget "Pods-minjection_Tests" */;
+			buildPhases = (
+				314BBF1C9203BE5E623BEA1AD81A3163 /* Sources */,
+				A46A796B4BD0BAE2C151EF36B59BC9B2 /* Frameworks */,
+				24C47CE489EB57E64F49B87599798B59 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
 			);
 			name = "Pods-minjection_Tests";
 			productName = "Pods-minjection_Tests";
-			productReference = 0EFC8A4FBBE311266FA1E27306544FDA /* Pods_minjection_Tests.framework */;
+			productReference = 22D22D497FDA31E6F568A885C1A26CE9 /* Pods_minjection_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		5EE33F5E2F8E37D56EDC2B85A05DEC57 /* minjection */ = {
+		46352963968A482BC014FC6C3451B19E /* minjection */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 572BA2E2BE5B0156D31F93E55413D0B1 /* Build configuration list for PBXNativeTarget "minjection" */;
+			buildConfigurationList = 41378B48520CD353CF777338CB38EF90 /* Build configuration list for PBXNativeTarget "minjection" */;
 			buildPhases = (
-				919CF26ACFC5018924572753B76C69C5 /* Sources */,
-				873C535916FDDA6585B99AE406AF2BA9 /* Frameworks */,
-				D2C5A570516AB98D4D50E64B3BF832B0 /* Headers */,
+				4D7F08EFA1DD96CC91F85744B053D284 /* Sources */,
+				5EAD3579034DA74DA814811014AE3DA9 /* Frameworks */,
+				E0ED770785D4E31A97C5A348A979F673 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -218,7 +296,7 @@
 			);
 			name = minjection;
 			productName = minjection;
-			productReference = F592F24F86B146177842A8B22493BF77 /* minjection.framework */;
+			productReference = 7649179D7F2E40CF5D544F221A6EFEF8 /* minjection.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -238,46 +316,89 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 46F94DEA4750326D021028ED826003DE /* Products */;
+			productRefGroup = FB32C053BD76D1AACD141965CBBA9B55 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5EE33F5E2F8E37D56EDC2B85A05DEC57 /* minjection */,
-				3A872F7234E0C398BFE15903A1399A24 /* Pods-minjection_Tests */,
+				46352963968A482BC014FC6C3451B19E /* minjection */,
+				252AB0B32DBC15E15F8CC8A3A9618110 /* Pods-minjection_Example */,
+				31B28CB3FF0B35B7B935FE141F6787CD /* Pods-minjection_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		25EC561F27C520AABF80B2D7BD69AE57 /* Sources */ = {
+		314BBF1C9203BE5E623BEA1AD81A3163 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C0ABBFBE17E7AEA0B05DB4057036623 /* Pods-minjection_Tests-dummy.m in Sources */,
+				8EB8EC179EA4224B7FC087E2AC0B810B /* Pods-minjection_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		919CF26ACFC5018924572753B76C69C5 /* Sources */ = {
+		4D7F08EFA1DD96CC91F85744B053D284 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				883650FE45C50DBA9A8BA820B2167910 /* minjection-dummy.m in Sources */,
-				4DBDB030819B846B4BA9A3C3E31F2EA9 /* ReplaceMe.m in Sources */,
+				E598EE0358C0DB382DC1938334F8D47F /* minjection-dummy.m in Sources */,
+				C09793DFFF27FBA18B531773347BB06A /* MinjectionContainer.m in Sources */,
+				02D1CE858BEDA5BFC82B1A1BD7B10F4D /* MinjectionOptions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50A4387AAA83E6A8EFF857E30F40DC27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BEC13D70525E1911FFE183BEC244C73 /* Pods-minjection_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DB55FDA6A0C8E244A505139C05C942F9 /* PBXTargetDependency */ = {
+		1CBD6894B4BF906410A823322982AA4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = minjection;
-			target = 5EE33F5E2F8E37D56EDC2B85A05DEC57 /* minjection */;
-			targetProxy = 9EB09F8D511D61859AD231B7ED11C088 /* PBXContainerItemProxy */;
+			target = 46352963968A482BC014FC6C3451B19E /* minjection */;
+			targetProxy = 9FF9FA4C47074E4E415F0564DF87A2EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		32BA615E1D6174DBAA4BB377236E7575 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E620BB24139B27A3AFAC13E1D136DA0 /* Pods-minjection_Tests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-minjection_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-minjection_Tests/Pods-minjection_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_minjection_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		33DA7F43A1D2FA3C74A8C8FC246E1FA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,9 +514,9 @@
 			};
 			name = Release;
 		};
-		C02997E7CFEDB3CCA149AA84EC1EB79D /* Debug */ = {
+		80731A80C7D9D438F1A06F641E9EA744 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B78C32D5EFDB376108C5EB1BF46367B8 /* Pods-minjection_Tests.debug.xcconfig */;
+			baseConfigurationReference = ED642269A716D035CB66501880435A09 /* minjection.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -406,17 +527,46 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-minjection_Tests/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/minjection/minjection-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/minjection/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/minjection/minjection.modulemap";
+				PRODUCT_NAME = minjection;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE2C0664687180C38074D2C8AD1C8DF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD46F59C04E78C9B2DAD5D925ED186BD /* Pods-minjection_Example.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-minjection_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-minjection_Tests/Pods-minjection_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-minjection_Example/Pods-minjection_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_minjection_Tests;
+				PRODUCT_NAME = Pods_minjection_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,9 +575,9 @@
 			};
 			name = Debug;
 		};
-		C9A6686ACDBA486B6EDC3966D08047C6 /* Debug */ = {
+		CF57C84A5C87342850F264F7DA30A209 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F00A1093CB53DF82388B2ED918174DC /* minjection.xcconfig */;
+			baseConfigurationReference = EAC90C4647AF806E5DDC251807E106A8 /* Pods-minjection_Example.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -438,45 +588,19 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/minjection/minjection-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/minjection/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-minjection_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/minjection/minjection.modulemap";
-				PRODUCT_NAME = minjection;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-minjection_Example/Pods-minjection_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_minjection_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CB12F505B4E05E29A15987525CB4487A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F00A1093CB53DF82388B2ED918174DC /* minjection.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/minjection/minjection-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/minjection/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/minjection/minjection.modulemap";
-				PRODUCT_NAME = minjection;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -484,9 +608,9 @@
 			};
 			name = Release;
 		};
-		E48FC29DD11116B7A7546BC0A52C99DB /* Release */ = {
+		D55EC54CD06A2277E544BE812DD73BD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5E695459E2705177FB6058C62947380 /* Pods-minjection_Tests.release.xcconfig */;
+			baseConfigurationReference = 4DFF60141FBF99F50FD420580916DFA8 /* Pods-minjection_Tests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -510,6 +634,35 @@
 				PRODUCT_NAME = Pods_minjection_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD7C01570F6B678916B830ACCABB7C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED642269A716D035CB66501880435A09 /* minjection.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/minjection/minjection-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/minjection/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/minjection/minjection.modulemap";
+				PRODUCT_NAME = minjection;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -520,6 +673,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E5FBA1A7224FD5A9849B599D2FBEE08 /* Build configuration list for PBXNativeTarget "Pods-minjection_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE2C0664687180C38074D2C8AD1C8DF1 /* Debug */,
+				CF57C84A5C87342850F264F7DA30A209 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -529,20 +691,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		572BA2E2BE5B0156D31F93E55413D0B1 /* Build configuration list for PBXNativeTarget "minjection" */ = {
+		41378B48520CD353CF777338CB38EF90 /* Build configuration list for PBXNativeTarget "minjection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C9A6686ACDBA486B6EDC3966D08047C6 /* Debug */,
-				CB12F505B4E05E29A15987525CB4487A /* Release */,
+				80731A80C7D9D438F1A06F641E9EA744 /* Debug */,
+				DD7C01570F6B678916B830ACCABB7C32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FFBF1E0BA2666D276ABC30B9CC19E3A9 /* Build configuration list for PBXNativeTarget "Pods-minjection_Tests" */ = {
+		C4C05F901F5509B5176D95866DD949F9 /* Build configuration list for PBXNativeTarget "Pods-minjection_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C02997E7CFEDB3CCA149AA84EC1EB79D /* Debug */,
-				E48FC29DD11116B7A7546BC0A52C99DB /* Release */,
+				D55EC54CD06A2277E544BE812DD73BD0 /* Debug */,
+				32BA615E1D6174DBAA4BB377236E7575 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

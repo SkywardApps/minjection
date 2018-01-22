@@ -10,9 +10,7 @@
 #endif
 #endif
 
-#import "MinjectionContainer.h"
-#import "MinjectionOptions.h"
 
-FOUNDATION_EXPORT double minjectionVersionNumber;
-FOUNDATION_EXPORT const unsigned char minjectionVersionString[];
+FOUNDATION_EXPORT double Pods_minjection_ExampleVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_minjection_ExampleVersionString[];
 

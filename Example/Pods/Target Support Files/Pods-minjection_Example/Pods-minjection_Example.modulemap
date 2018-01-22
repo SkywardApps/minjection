@@ -1,0 +1,6 @@
+framework module Pods_minjection_Example {
+  umbrella header "Pods-minjection_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
