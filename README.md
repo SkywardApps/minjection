@@ -27,3 +27,38 @@ Nicholas Elliott, nelliott@skywardapps.com
 ## License
 
 minjection is available under the MIT license. See the LICENSE file for more info.
+
+
+Introduction
+
+Installation
+Quickstart
+Cocoapod
+Manually
+
+Registering and Resolving
+Instances
+Class instantiantion and initializer injection
+Factory blocks and dependencies
+Injecting the Minjector
+
+Auto injecting properties
+On demand
+On resolution
+
+Lifecycles
+Instance
+Cycle
+Static
+
+FAQs
+
+Release Notes
+
+Roadmap
+
+Contributing
+
+License
+
+Meet the Maintainers

@@ -1,0 +1,6 @@
+framework module minjection {
+  umbrella header "minjection-umbrella.h"
+
+  export *
+  module * { export * }
+}

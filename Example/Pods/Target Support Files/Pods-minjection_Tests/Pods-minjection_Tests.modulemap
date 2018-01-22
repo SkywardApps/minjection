@@ -1,0 +1,6 @@
+framework module Pods_minjection_Tests {
+  umbrella header "Pods-minjection_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
