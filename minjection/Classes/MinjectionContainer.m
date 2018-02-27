@@ -104,6 +104,18 @@
     else if(options.forClass != nil)
         key = [self keyForClass:options.forClass];
     
+    // Remove any pre-existing versions of these items
+    if(options.lifetime == MinjectionLifetimeCycle)
+    {
+        if(_chainCache[key] != nil)
+           [_chainCache removeObjectForKey:key];
+    }
+    else if(options.lifetime == MinjectionLifetimeStatic)
+    {
+        if(_staticCache[key] != nil)
+           [_staticCache removeObjectForKey:key];
+    }
+    
     // We create a factory method that handles the options requested
     FactoryMethodWithDependencies constructorMethod = [^(MinjectionContainer* container){
         // The simplest case is if an instance is provided.  We do nothing.
