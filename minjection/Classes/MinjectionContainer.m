@@ -127,13 +127,13 @@
         // First check our caches.  We have separate stores for cycle and static.
         if(options.lifetime == MinjectionLifetimeCycle)
         {
-            createdObject = _chainCache[key];
+            createdObject = self->_chainCache[key];
             if(createdObject != nil)
                 return createdObject;
         }
         else if(options.lifetime == MinjectionLifetimeStatic)
         {
-            createdObject = _staticCache[key];
+            createdObject = self->_staticCache[key];
             if(createdObject != nil)
                 return createdObject;
         }
@@ -168,11 +168,11 @@
         // We do this before we inject any further properties so that common services are re-used (if the scope dictates they should).
         if(options.lifetime == MinjectionLifetimeCycle)
         {
-            _chainCache[key] = createdObject;
+            self->_chainCache[key] = createdObject;
         }
         else if(options.lifetime == MinjectionLifetimeStatic)
         {
-            _staticCache[key] = createdObject;
+            self->_staticCache[key] = createdObject;
         }
         
         // Now take the opportunity to inject into the object if needed.
@@ -296,7 +296,6 @@
         
         id resolvedObject = nil;
         
-        // Case we're missing here: NSString<Protocol>
         if([typeAttribute hasPrefix:@"T@\"<"])
         {
             // this is a protocol!
