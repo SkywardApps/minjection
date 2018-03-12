@@ -1,6 +1,6 @@
 # Minjection
 
-[![CI Status](http://img.shields.io/travis/undiwahn/minjection.svg?style=flat)](https://travis-ci.org/undiwahn/minjection)
+[![CI Status](http://img.shields.io/travis/SkywardApps/minjection.svg?style=flat)](https://travis-ci.org/SkywardApps/minjection)
 [![Version](https://img.shields.io/cocoapods/v/minjection.svg?style=flat)](http://cocoapods.org/pods/minjection)
 [![License](https://img.shields.io/cocoapods/l/minjection.svg?style=flat)](http://cocoapods.org/pods/minjection)
 [![Platform](https://img.shields.io/cocoapods/p/minjection.svg?style=flat)](http://cocoapods.org/pods/minjection)
