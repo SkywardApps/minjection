@@ -138,7 +138,9 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
     self.postInjectionExecutor = [^(id target, MinjectionContainer * container) {
         if([target respondsToSelector:sel])
         {
-            [target performSelector:sel];
+            IMP imp = [target methodForSelector:sel];
+            void (*func)(id, SEL) = (void *)imp;
+            func(target, sel);
         }
         else
         {
