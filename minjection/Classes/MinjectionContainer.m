@@ -85,7 +85,7 @@
         func(instance, selector);
         
         return instance;
-    } copy]forKey:[self keyForProtocol:target]];
+    } copy] forKey:[self keyForProtocol:target]];
 }
 
 - (void)registerBlock:(FactoryMethod)block forProtocol:(Protocol*)target
@@ -127,13 +127,13 @@
         // First check our caches.  We have separate stores for cycle and static.
         if(options.lifetime == MinjectionLifetimeCycle)
         {
-            createdObject = _chainCache[key];
+            createdObject = self->_chainCache[key];
             if(createdObject != nil)
                 return createdObject;
         }
         else if(options.lifetime == MinjectionLifetimeStatic)
         {
-            createdObject = _staticCache[key];
+            createdObject = self->_staticCache[key];
             if(createdObject != nil)
                 return createdObject;
         }
@@ -168,11 +168,11 @@
         // We do this before we inject any further properties so that common services are re-used (if the scope dictates they should).
         if(options.lifetime == MinjectionLifetimeCycle)
         {
-            _chainCache[key] = createdObject;
+            self->_chainCache[key] = createdObject;
         }
         else if(options.lifetime == MinjectionLifetimeStatic)
         {
-            _staticCache[key] = createdObject;
+            self->_staticCache[key] = createdObject;
         }
         
         // Now take the opportunity to inject into the object if needed.
@@ -255,12 +255,10 @@
     if (typeProtocol == nil)
         return nil;
     
-    NSLog(@"Which we understood");
     
     if(![self canResolveProtocol:typeProtocol])
         return nil;
     
-    NSLog(@"And can resolve!");
     return [self resolveProtocol:typeProtocol];
 }
 
@@ -269,12 +267,9 @@
     if (typeClass == nil)
         return nil;
     
-    NSLog(@"Which we understood");
-    
     if(![self canResolveClass:typeClass])
         return nil;
     
-    NSLog(@"And can resolve!");
     return [self resolveClass:typeClass];
 }
 
@@ -289,7 +284,6 @@
         objc_property_t property = propertyArray[i];
         NSString *name = [[NSString alloc] initWithUTF8String:property_getName(property)];
         NSString *attributesString = [[NSString alloc] initWithUTF8String:property_getAttributes(property)];
-        NSLog(@"Property %@ attributes: %@", name, attributesString);
         
         NSArray *attributes = [attributesString componentsSeparatedByString:@","];
         NSString *typeAttribute = attributes[0];
@@ -300,28 +294,22 @@
         if([attributes[1] isEqualToString:@"R"])
             continue;
         
-        NSLog(@"And can write to");
-        
         id resolvedObject = nil;
         
-        // Case we're missing here: NSString<Protocol>
         if([typeAttribute hasPrefix:@"T@\"<"])
         {
             // this is a protocol!
-            NSLog(@"Appears to be a protocol!");
             NSString * typeProtocolName = [typeAttribute substringWithRange:NSMakeRange(4, typeAttribute.length-6)];  //turns @"<NSDate>" into NSDate
             resolvedObject = [self attemptToResolveProtocolName:typeProtocolName];
         }
         else if([typeAttribute rangeOfString:@"<"].location == NSNotFound)
         {
-            NSLog(@"Appears to be a class");
             NSString * typeClassName = [typeAttribute substringWithRange:NSMakeRange(3, typeAttribute.length-4)];  //turns @"NSDate" into NSDate
             resolvedObject = [self attemptToResolveClassName:typeClassName];
         }
         else
         {
             // both cases apply here!
-            NSLog(@"Appears to be a class with a protocol");
             NSInteger locationOfProtocol = [typeAttribute rangeOfString:@"<"].location;
             NSInteger locationOfProtocolEnd = [typeAttribute rangeOfString:@">"].location;
             NSString* typeProtocolName = [typeAttribute substringWithRange:NSMakeRange(locationOfProtocol+1, locationOfProtocolEnd-locationOfProtocol-1)];
@@ -343,7 +331,6 @@
             continue;
         
         // Find the setter
-        NSLog(@"Was not already set, so injecting!");
         [target setValue:resolvedObject forKey:name];
         
     }

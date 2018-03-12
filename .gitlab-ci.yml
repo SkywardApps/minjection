@@ -1,0 +1,40 @@
+# This is the configuration file for git-lab's CI service.
+# We have 4 stages:
+stages:
+# Make sure everything compiles OK
+- build
+# A unit test stage, where the code core is tested
+- test
+# A re-deployment stage that will automatically update our existing S3 deployment
+- deploy
+
+# Stage where we test the iOS build
+iOSBuild:
+ stage: build
+ script:
+ - xcodebuild -workspace ./Example/minjection.xcworkspace -scheme minjection-Example -destination "platform=iOS Simulator,name=iPhone X" build
+ - pod lib lint
+ retry: 2
+ tags:
+ - iOS
+
+# Stage where we test the iOS Unit tests
+iOSUnitTests:
+ stage: test
+ script:
+ - xcodebuild -workspace ./Example/minjection.xcworkspace -scheme minjection-Example -destination "platform=iOS Simulator,name=iPhone X" test
+ retry: 1
+ tags:
+ - iOS
+
+
+ # A stage to clear and repopulate the QA deployment's information
+publishCocoapod:
+ stage: deploy
+ when: manual
+ only:
+ - master
+ script:
+ - pod trunk push minjection.podspec
+ tags:
+ - x86
