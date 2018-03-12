@@ -25,6 +25,7 @@
         _registerFactory = nil;
         _factoryDependencies = nil;
         _registerInstance = nil;
+        _postInjectionExecutor = nil;
         
         _shouldInjectProperties = YES;
         _lifetime = MinjectionLifetimeUnknown;
@@ -91,5 +92,60 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
     
 }
 
+- (id)initForClass:(Class)forClass
+{
+    if((self = [self init]))
+    {
+        _forClass = forClass;
+    }
+    return self;
+}
+
+- (id)initForProtocol:(Protocol *)forProtocol
+{
+    if((self = [self init]))
+    {
+        _forProtocol = forProtocol;
+    }
+    return self;
+}
+
+- (void)provideWithClass:(Class)cls initializer:(SEL)initializer
+{
+    _registerClass = cls;
+    _registerClassInitializer = initializer;
+}
+
+- (void)provideWithFactory:(FactoryMethodWithDependencies)factory dependencies:(NSDictionary<NSString *,id> *)dependencies
+{
+    _registerFactory = factory;
+    _factoryDependencies = dependencies;
+}
+
+/**
+ * Helper methods to set up post-injection executor.
+ */
+- (void) postInjectWithBlock:(PostInjection)executor
+{
+    self.postInjectionExecutor = [executor copy];
+}
+
+/**
+ * Helper methods to set up post-injection selector to be called on the created object.
+ */
+- (void) postInjectWithSelector:(SEL)sel
+{
+    self.postInjectionExecutor = [^(id target, MinjectionContainer * container) {
+        if([target respondsToSelector:sel])
+        {
+            [target performSelector:sel];
+        }
+        else
+        {
+            NSLog(@"Warning: Set up for post injection selector %@ but it was not found on the target object.", NSStringFromSelector(sel));
+        }
+    } copy];
+    
+}
 
 @end

@@ -23,9 +23,16 @@
 @property (atomic, strong) NSArray* blockCanAlsoInject;
 @property (atomic, strong) AutoInjectable* selfReferencingProperty;
 
+- (void) postInjectionCallback;
+@property (readonly) NSString* postInjectionCalled;
+
 @end
 
 @implementation AutoInjectable
+- (void) postInjectionCallback
+{
+    _postInjectionCalled = @"OK";
+}
 @end
 
 
@@ -321,5 +328,64 @@
     XCTAssertEqual(service1, service1.selfReferencingProperty, @"Service was not cycle scoped");
 }
 
+- (void) testPostInjectorExecutionNoInjection{
+    MinjectionOptions* options = [[MinjectionOptions alloc] init];
+    options.forClass = AutoInjectable.class;
+    options.registerClass = AutoInjectable.class;
+    options.registerClassInitializer = @selector(init);
+    // DO NOT inject any properties, it should still fire
+    options.shouldInjectProperties = NO;
+    options.lifetime = MinjectionLifetimeCycle;
+    options.postInjectionExecutor = ^(AutoInjectable* target, MinjectionContainer * container) {
+        XCTAssertNotNil((target), @"Target was nil");
+        XCTAssertNotNil((container), @"Container was nil");
+        
+        [target postInjectionCallback];
+    };
+    
+    MinjectionContainer* container = [[MinjectionContainer alloc] init];
+    [container registerWithOptions:options];
+    
+    AutoInjectable* service1 = [container resolveClass:AutoInjectable.class];
+    XCTAssertEqualObjects(@"OK", service1.postInjectionCalled);
+}
 
+- (void) testPostInjectorExecutionBlock {
+    MinjectionOptions* options = [[MinjectionOptions alloc] init];
+    options.forClass = AutoInjectable.class;
+    options.registerClass = AutoInjectable.class;
+    options.registerClassInitializer = @selector(init);
+    // INJECT properties, should fire
+    options.shouldInjectProperties = YES;
+    options.lifetime = MinjectionLifetimeCycle;
+    options.postInjectionExecutor = ^(AutoInjectable* target, MinjectionContainer * container) {
+        XCTAssertNotNil((target), @"Target was nil");
+        XCTAssertNotNil((container), @"Container was nil");
+        
+        [target postInjectionCallback];
+    };
+    
+    MinjectionContainer* container = [[MinjectionContainer alloc] init];
+    [container registerWithOptions:options];
+    
+    AutoInjectable* service1 = [container resolveClass:AutoInjectable.class];
+    XCTAssertEqualObjects(@"OK", service1.postInjectionCalled);
+}
+
+- (void) testPostInjectorExecutionSelector {
+    MinjectionOptions* options = [[MinjectionOptions alloc] init];
+    options.forClass = AutoInjectable.class;
+    options.registerClass = AutoInjectable.class;
+    options.registerClassInitializer = @selector(init);
+    // INJECT properties, should fire
+    options.shouldInjectProperties = YES;
+    options.lifetime = MinjectionLifetimeCycle;
+    [options postInjectWithSelector:@selector(postInjectionCallback)];
+    
+    MinjectionContainer* container = [[MinjectionContainer alloc] init];
+    [container registerWithOptions:options];
+    
+    AutoInjectable* service1 = [container resolveClass:AutoInjectable.class];
+    XCTAssertEqualObjects(@"OK", service1.postInjectionCalled);
+}
 @end

@@ -181,6 +181,11 @@
             [self injectProperties:createdObject];
         }
         
+        if(options.postInjectionExecutor != nil)
+        {
+            options.postInjectionExecutor(createdObject, self);
+        }
+        
         return createdObject;
     } copy];
     

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'minjection'
-  s.version          = '0.4.0'
+  s.version          = '0.5.0'
   s.summary          = 'A minimal dependency injection library for Objective-C.'
 
 # This description is used to generate tags and improve search results.

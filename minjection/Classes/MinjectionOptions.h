@@ -16,6 +16,11 @@ typedef id(^FactoryMethod)(MinjectionContainer*);
 typedef id(^FactoryMethodWithDependencies)(MinjectionContainer*, NSDictionary<NSString*,id>*);
 
 /**
+ * The block types we use for post-injection notification
+ */
+typedef void(^PostInjection)(id,MinjectionContainer*);
+
+/**
  * Control how long an instance is used within the container.
  */
 typedef enum {
@@ -51,7 +56,8 @@ typedef enum {
      registerFactory:(FactoryMethodWithDependencies)factory
  factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
 shouldInjectProperties:(BOOL)shouldInjectProperties
-            lifetime:(MinjectionLifetime)lifetime;
+            lifetime:(MinjectionLifetime)lifetime
+            __deprecated;
 
 
 + (id)      forProtocol:(Protocol*)forProtocol
@@ -61,7 +67,20 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
         registerFactory:(FactoryMethodWithDependencies)factory
     factoryDependencies:(NSDictionary<NSString*, id>*)dependencies
  shouldInjectProperties:(BOOL)shouldInjectProperties
-               lifetime:(MinjectionLifetime)lifetime;
+               lifetime:(MinjectionLifetime)lifetime
+                __deprecated;
+
+#pragma mark - Constructor methods
+
+/**
+ * Create an options collection to provide a class
+ */
+- (id) initForClass:(Class)forClass;
+
+/**
+ * Create an options collection to provide a protocol
+ */
+- (id) initForProtocol:(Protocol*)forProtocol;
 
 #pragma mark - Service description
 
@@ -75,7 +94,9 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
  */
 @property Protocol* forProtocol;
 
-#pragma mark - Creation methods
+#pragma mark -- Creation methods
+
+#pragma mark - Class instantiation method
 
 /**
  * The class type this will instantiate for fulfillment of the service.
@@ -90,10 +111,19 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
 @property SEL registerClassInitializer;
 
 /**
+ * Helper method to set up class instantiation fulfillment
+ */
+- (void) provideWithClass:(Class)cls initializer:(SEL)initializer;
+
+#pragma mark - Pre-existing instance method
+
+/**
  * The single instance this will provide.
  * Mutually exclusive with registerClass and registerFactory.
  */
 @property id registerInstance;
+
+#pragma mark - Factory method
 
 /**
  * The factory block method this will use to instantiate the service.
@@ -106,6 +136,28 @@ shouldInjectProperties:(BOOL)shouldInjectProperties
  * Only valid with registerFactory
  */
 @property NSDictionary<NSString*,id>* factoryDependencies;
+
+/**
+ * Helper method to set up factory creation fulfillment
+ */
+- (void) provideWithFactory:(FactoryMethodWithDependencies)factory dependencies:(NSDictionary<NSString*,id>*)dependencies;
+
+#pragma mark - Post injection behavior
+
+/**
+ * A block to perform any post-injection work.
+ */
+@property PostInjection postInjectionExecutor;
+
+/**
+ * Helper methods to set up post-injection executor.
+ */
+- (void) postInjectWithBlock:(PostInjection)executor;
+
+/**
+ * Helper methods to set up post-injection selector to be called on the created object.
+ */
+- (void) postInjectWithSelector:(SEL)sel;
 
 #pragma mark - Behaviour controls
 

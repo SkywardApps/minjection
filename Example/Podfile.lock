@@ -1,5 +1,5 @@
 PODS:
-  - minjection (0.2.0)
+  - minjection (0.5.0)
 
 DEPENDENCIES:
   - minjection (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  minjection: 2c75e0ea1ecaa7f9c5df3f98159b1ab6cddbddd6
+  minjection: 5847815375e1f2dddfcdaa971e68fbce52d86cbf
 
 PODFILE CHECKSUM: 3d3798b4d741a54c14eca258391d2c2559d34d99
 
