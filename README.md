@@ -41,7 +41,7 @@ We wrote this to fill the gaps because we've been spoiled by good options in oth
 languages, and hope this will likewise prove useful to others.
 
 If you don't know why you would want dependency injection, there are many good discussions on the web -- for example,
-[Java HOW-TO](https://www.javaworld.com/article/2071914/excellent-explanation-of-dependency-injection--inversion-of-control-.html) or [Objective-C discussion]{https://www.objc.io/issues/15-testing/dependency-injection/}.
+[Java HOW-TO](https://www.javaworld.com/article/2071914/excellent-explanation-of-dependency-injection--inversion-of-control-.html) or [Objective-C discussion](https://www.objc.io/issues/15-testing/dependency-injection/).
 
 The short of it is: Using dependency injection, you make your code more maintainable, more transparent, and more testable.  This library just provides a minimal set of objects and methods to get you started.
 
